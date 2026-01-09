@@ -41,11 +41,13 @@ services:
     network_mode: bridge
     environment:
       - SERVER_PORT=7777
+      - MULTIHOME=192.168.0.XYZ
     volumes:
       - './savegame:/home/container/server_files/StarRupture/Saved/SaveGames:rw'
       - './server:/home/container/server_files:rw'
     ports:
       - '7777:7777/udp'
+      - '7777:7777'
     restart: unless-stopped
 ```
 

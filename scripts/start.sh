@@ -44,7 +44,7 @@ echo "Configuring StarRupture Dedicated Server ..."
 echo " "
 
 MULTIHOME=${MULTIHOME:"0.0.0.0"}
-echo "Using port: $MULTIHOME"
+echo "Using IP: $MULTIHOME"
 
 
 SERVER_PORT=${SERVER_PORT:-7777}
