@@ -24,7 +24,7 @@ echo " "
 echo "Installing/Updating StarRupture Dedicated Server files..."
 echo " "
 
-$steamcmd +force_install_dir "$server_files" +login anonymous +app_update 3809400 validate +quit
+$steamcmd  +@sSteamCmdForcePlatformType windows +force_install_dir "$server_files" +login anonymous +app_update 3809400 validate +quit
 exit_code=$?
 
 if [ $exit_code -ne 0 ]; then
