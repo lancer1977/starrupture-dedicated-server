@@ -56,6 +56,5 @@ echo "Launching StarRupture Dedicated Server"
 echo " "
 
 # RUN
-cd "$server_files"
-xvfb-run --auto-servernum wine $server_files/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe -Log -port=$SERVER_PORT -MULTIHOME=$MULTIHOME 2>&1
+cd "$server_files" 
 xvfb-run --auto-servernum wine "$server_files/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe" -Log -port="$SERVER_PORT" -MULTIHOME="$MULTIHOME" 2>&1
