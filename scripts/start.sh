@@ -43,6 +43,10 @@ echo " "
 echo "Configuring StarRupture Dedicated Server ..."
 echo " "
 
+MULTIHOME=${MULTIHOME:"0.0.0.0"}
+echo "Using port: $MULTIHOME"
+
+
 SERVER_PORT=${SERVER_PORT:-7777}
 echo "Using port: $SERVER_PORT"
 
@@ -52,4 +56,4 @@ echo " "
 
 # RUN
 cd "$server_files"
-xvfb-run --auto-servernum wine $server_files/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe -Log -port=$SERVER_PORT 2>&1
+xvfb-run --auto-servernum wine $server_files/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe -Log -port=$SERVER_PORT -MULTIHOME=$MULTIHOME 2>&1
