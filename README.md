@@ -62,3 +62,9 @@ You can use these environment variables for your server settings:
 ## Links
 Github [https://github.com/struppinet/starrupture-dedicated-server](https://github.com/struppinet/starrupture-dedicated-server)  
 Docker [https://hub.docker.com/r/struppinet/starrupture-dedicated-server](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
+
+
+## 📖 Documentation
+Detailed documentation can be found in the following sections:
+- [Feature Index](./docs/features/README.md)
+- [Core Capabilities](./docs/features/core-capabilities.md)
