@@ -2,6 +2,15 @@
 
 ![Static Badge](https://img.shields.io/badge/GitHub-starrupture--dedicated--server-blue?logo=github) [![Docker Hub](https://img.shields.io/badge/Docker_Hub-starrupture--dedicated--server-blue?logo=docker)](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
 
+## Tags
+
+- game
+- starrupture-dedicated-server
+- game-server
+- server
+- docker
+- docs
+
 ## Table of contents
 - [Docker Run command](#docker-run)
 - [Docker Compose command](#docker-compose)
