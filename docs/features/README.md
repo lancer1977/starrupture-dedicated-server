@@ -1,23 +1,16 @@
----
-title: Feature Index
-status: done
-owner: @DreadBreadcrumb
-priority: high
-complexity: 1
-created: 2026-03-22
-updated: 2026-03-22
-tags: [documentation, starrupture-dedicated-server]
----
+# StarRupture Dedicated Server Feature Index
 
-# Feature Index
+Canonical docs entrypoint for the StarRupture Docker image capabilities.
 
-This directory documents all features and roadmap items. All state is now tracked in front matter.
+## Server / Deployment Features
 
-## Core Features (Existing Functionality)
+- [Docker for a StarRupture dedicated server](./docker-for-a-starrupture-dedicated-server.md)
+- [Docker Run Command](./docker-run-command-docker-run.md)
+- [Docker Compose Command](./docker-compose-command-docker-compose.md)
+- [Environment Variables Server Settings](./environment-variables-server-settings-environment-variables-server-settings.md)
+- [Sub-module Scripts](./sub-module-scripts.md)
 
-- [Sub-module: scripts](./sub-module-scripts.md)
+## Notes
 
-
-## Beyond the App
-
-- Shared utilities and local development tools.
+- Keep the docs aligned with the image that is actually built and published.
+- Prefer concrete operator guidance over implied or aspirational behavior.
