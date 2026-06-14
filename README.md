@@ -2,6 +2,10 @@
 
 ![Static Badge](https://img.shields.io/badge/GitHub-starrupture--dedicated--server-blue?logo=github) [![Docker Hub](https://img.shields.io/badge/Docker_Hub-starrupture--dedicated--server-blue?logo=docker)](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
 
+Runtime lane for the StarRupture dedicated server image.
+
+First read: [docs/README.md](./docs/README.md).
+
 ## Infra Goal Path
 
 This repo is the StarRupture runtime/deploy lane. The repo should make the

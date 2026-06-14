@@ -3,6 +3,8 @@
 This docs tree keeps the StarRupture runtime boundary explicit and aligns the
 repo with the shared infra ladder from `Api.GameServerInterop`.
 
+Start here for routing; the paired support home lives in `../starrupture-support`.
+
 ## Infra Baseline
 
 - `V0`: bootable dedicated server image, support/readback or sidecar boundary,

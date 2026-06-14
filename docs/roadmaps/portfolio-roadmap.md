@@ -1,5 +1,7 @@
 # starrupture-dedicated-server portfolio roadmap
 
+Use this roadmap for the runtime lane only. The paired support home is `../starrupture-support`.
+
 ## Goal Path
 
 - `V0`: bootable dedicated server image, support/readback boundary, deployment lane, and smoke checks
