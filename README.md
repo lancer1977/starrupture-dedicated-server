@@ -27,35 +27,35 @@ StarRupture-specific Docker packaging and runtime setup.
 - docs
 
 ## Table of contents
-- [Docker Run command](#docker-run)
-- [Docker Compose command](#docker-compose)
+- [Quick start](#quick-start)
+- [Compose](#compose)
 - [Environment variables server settings](#environment-variables-server-settings)
   
-This is a Docker container to help you get started with hosting your own [StarRupture](https://starrupture-game.com/) dedicated server.
+This repo documents and packages a Docker container for hosting a [StarRupture](https://starrupture-game.com/) dedicated server.
 
-## Info
+## Purpose
 
-- Start the image with the wished port (7777 by default) and then connect ingame to start a game and set passwords.
-- This image uses the pterodactyl/wine yolk [Ptero-Eggs](https://github.com/ptero-eggs/) as it was the only thing working. Thank you guys for your work!
+The image is meant for homelab-style deployment with Docker or Compose. It uses the Ptero-Eggs Wine base image and exposes the expected save and server mount points.
 
-| Volume   | Path                                                     | Description                                                                                                    |
-|----------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| savegame | /home/container/server_files/StarRupture/Saved/SaveGames | The path where the savegame will be                                                                            |
-| server   | /home/container/server_files                             | The path where steam will install the starrupture dedicated server (optional to store to avoid re-downloading) |
+## V1 baseline
 
-## Docker Run
+- The image can be run with `docker run` or Compose.
+- The savegame and server mounts are documented.
+- V1 means the container is deployable and the operator path is clear.
+
+## Quick start
 
 ```bash
 docker run -d \
-    --name starrupture \
-    -p 7777:7777/udp \    
-    -v ./savegame:"/home/container/server_files/StarRupture/Saved/SaveGames" \
-    -v ./server:"/home/container/server_files" \
-    -e SERVER_PORT=7777 \
-    struppinet/starrupture-dedicated-server:latest
+  --name starrupture \
+  -p 7777:7777/udp \
+  -v ./savegame:/home/container/server_files/StarRupture/Saved/SaveGames \
+  -v ./server:/home/container/server_files \
+  -e SERVER_PORT=7777 \
+  struppinet/starrupture-dedicated-server:latest
 ```
 
-## Docker Compose
+## Compose
 
 ```yml
 services:
@@ -75,6 +75,11 @@ services:
     restart: unless-stopped
 ```
 
+| Volume   | Path                                                     | Description                                                                                                    |
+|----------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| savegame | /home/container/server_files/StarRupture/Saved/SaveGames | The path where the savegame will be                                                                            |
+| server   | /home/container/server_files                             | The path where steam will install the starrupture dedicated server (optional to store to avoid re-downloading) |
+
 ## Environment variables server settings
 
 You can use these environment variables for your server settings:
@@ -87,6 +92,7 @@ You can use these environment variables for your server settings:
 Github [https://github.com/struppinet/starrupture-dedicated-server](https://github.com/struppinet/starrupture-dedicated-server)  
 Docker [https://hub.docker.com/r/struppinet/starrupture-dedicated-server](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
 
+## Documentation
 
 ## 252 Deployment Status
 
@@ -97,3 +103,4 @@ Docker [https://hub.docker.com/r/struppinet/starrupture-dedicated-server](https:
 - [Docs Home](./docs/README.md)
 - [Feature Index](./docs/features/README.md)
 - [Core Capabilities](./docs/features/core-capabilities.md)
+- [Roadmap](./docs/roadmaps/portfolio-roadmap.md)

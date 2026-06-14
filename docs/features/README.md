@@ -1,17 +1,8 @@
----
-title: Feature Index
-status: done
-owner: @DreadBreadcrumb
-priority: high
-complexity: 1
-created: 2026-03-22
-updated: 2026-03-22
-tags: [documentation, starrupture-dedicated-server]
----
+# StarRupture Dedicated Server Feature Index
 
-# Feature Index
+Canonical docs entrypoint for the StarRupture Docker image capabilities.
 
-This directory documents all features and roadmap items. All state is now tracked in front matter.
+## Server / Deployment Features
 
 ## Infra Shape
 
@@ -20,7 +11,7 @@ This directory documents all features and roadmap items. All state is now tracke
 
 ## Core Features (Existing Functionality)
 
-- [Sub-module: scripts](./sub-module-scripts.md)
+## Notes
 
 
 ## Beyond the App
