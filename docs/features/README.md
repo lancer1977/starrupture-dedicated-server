@@ -13,6 +13,11 @@ tags: [documentation, starrupture-dedicated-server]
 
 This directory documents all features and roadmap items. All state is now tracked in front matter.
 
+## Infra Shape
+
+- `V0`: bootable dedicated server image, support/readback boundary, deployment lane, and smoke checks
+- `V1`: canonical support home lives in `../starrupture-support`
+
 ## Core Features (Existing Functionality)
 
 - [Sub-module: scripts](./sub-module-scripts.md)
@@ -20,4 +25,4 @@ This directory documents all features and roadmap items. All state is now tracke
 
 ## Beyond the App
 
-- Shared utilities and local development tools.
+- Shared utilities and local development tools, while reusable support contracts stay in `../starrupture-support`.

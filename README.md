@@ -2,6 +2,21 @@
 
 ![Static Badge](https://img.shields.io/badge/GitHub-starrupture--dedicated--server-blue?logo=github) [![Docker Hub](https://img.shields.io/badge/Docker_Hub-starrupture--dedicated--server-blue?logo=docker)](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
 
+## Infra Goal Path
+
+This repo is the StarRupture runtime/deploy lane. The repo should make the
+shared infra baseline explicit so the image, deployment, and validation path are
+easy to review folder by folder. The canonical support home lives in
+`../starrupture-support`.
+
+- `V0`: bootable dedicated server image, support/readback or sidecar boundary,
+  deployment lane, and smoke checks
+- `V1`: canonical support home lives in `../starrupture-support`; this repo
+  stays on the runtime lane
+
+The shared seam and ladder live in `Api.GameServerInterop`; this repo keeps the
+StarRupture-specific Docker packaging and runtime setup.
+
 ## Tags
 
 - game
@@ -73,7 +88,12 @@ Github [https://github.com/struppinet/starrupture-dedicated-server](https://gith
 Docker [https://hub.docker.com/r/struppinet/starrupture-dedicated-server](https://hub.docker.com/r/struppinet/starrupture-dedicated-server)
 
 
-## 📖 Documentation
-Detailed documentation can be found in the following sections:
+## 252 Deployment Status
+
+- 252 deployment status: not observed on 192.168.0.252 as of 2026-06-13; see [252 Deployment Status](../Api.GameServerInterop/docs/roadmap/252-deployment-status.md)
+
+## Documentation
+
+- [Docs Home](./docs/README.md)
 - [Feature Index](./docs/features/README.md)
 - [Core Capabilities](./docs/features/core-capabilities.md)
