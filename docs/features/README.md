@@ -9,6 +9,10 @@ Canonical docs entrypoint for the StarRupture Docker image capabilities.
 - `V0`: bootable dedicated server image, support/readback boundary, deployment lane, and smoke checks
 - `V1`: canonical support home lives in `../starrupture-support`
 
+## Version Coverage
+
+- [Version Coverage Map](./version-coverage-map.md)
+
 ## Core Features (Existing Functionality)
 
 ## Notes

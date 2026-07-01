@@ -14,6 +14,7 @@ Start here for routing; the paired support home lives in `../starrupture-support
 ## Contents
 
 - [Feature Index](features/README.md)
+- [Version Coverage Map](features/version-coverage-map.md)
 - [Roadmaps](roadmaps/README.md)
 - [Roadmap](roadmaps/portfolio-roadmap.md)
 
