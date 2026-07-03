@@ -1,12 +1,37 @@
-name: change-me
-repo_root: change-me
+schema: 1
+project:
+  name: DS-starrupture
+  kind: docker-runtime
+  owner: lancer1977
+  languages:
+    - dockerfile
+    - shell
+    - yaml
+  frameworks:
+    - docker
+    - docker-compose
 
-languages: []
-frameworks: []
+validation:
+  validate: bash scripts/validate.sh
+  scope:
+    - Runtime-lane docs, Dockerfile, start script, and deployment manifest presence checks.
+    - Docker Compose config validation for local, nginx, portainer, and published stack files.
 
 ci:
-  build: []
-  test: []
+  build:
+    - docker build .
+  test:
+    - bash scripts/validate.sh
+
+tracking:
+  primary: local-00-agile
+  dev-studio: DEV_STUDIO.md
+
+docs:
+  index: docs/README.md
+  validation: docs/validation.md
+  features: docs/features/README.md
+  roadmap: docs/roadmaps/portfolio-roadmap.md
 
 devstudio:
   runtime_model: three-agent
