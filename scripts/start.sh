@@ -1,4 +1,5 @@
 #!/bin/bash
+set -u
 
 echo " "
 echo "Startup"
@@ -14,17 +15,17 @@ echo "Installing Steam"
 echo " "
 
 steam_path=/home/container/steamcmd
-mkdir -p $steam_path
-curl -sSL -o $steam_path/steamcmd.tar.gz https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-tar -xzf $steam_path/steamcmd.tar.gz -C $steam_path
-steamcmd=$steam_path/steamcmd.sh
+mkdir -p "$steam_path"
+curl -sSL -o "$steam_path/steamcmd.tar.gz" https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
+tar -xzf "$steam_path/steamcmd.tar.gz" -C "$steam_path"
+steamcmd="$steam_path/steamcmd.sh"
 echo "Steam ... OK"
 
 echo " "
 echo "Installing/Updating StarRupture Dedicated Server files..."
 echo " "
 
-$steamcmd  +@sSteamCmdForcePlatformType windows +force_install_dir "$server_files" +login anonymous +app_update 3809400 validate +quit
+"$steamcmd" +@sSteamCmdForcePlatformType windows +force_install_dir "$server_files" +login anonymous +app_update 3809400 validate +quit
 exit_code=$?
 
 if [ $exit_code -ne 0 ]; then
@@ -32,7 +33,7 @@ if [ $exit_code -ne 0 ]; then
   echo "SteamCmd failed with exit code: $exit_code"
   echo "Try deleting the appmanifest file or clear the whole server_files (installation only)"
   echo " "
-  exit
+  exit "$exit_code"
 else
   echo " "
   echo "SteamCmd finished successfully (Exit Code: $exit_code)"
@@ -56,5 +57,5 @@ echo "Launching StarRupture Dedicated Server"
 echo " "
 
 # RUN
-cd "$server_files" 
+cd "$server_files"
 xvfb-run --auto-servernum wine "$server_files/StarRupture/Binaries/Win64/StarRuptureServerEOS-Win64-Shipping.exe" -Log -port="$SERVER_PORT" -MULTIHOME="$MULTIHOME" 2>&1

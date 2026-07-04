@@ -30,6 +30,12 @@ grep -q "delegated_versions: \\[V1, V2, V3, V4, V5\\]" docs/features/version-cov
 grep -q "app_update 3809400 validate" scripts/start.sh
 grep -q "StarRuptureServerEOS-Win64-Shipping.exe" scripts/start.sh
 grep -q "SERVER_PORT" Dockerfile README.md scripts/start.sh
+grep -q 'set -u' scripts/start.sh
+grep -q 'mkdir -p "$steam_path"' scripts/start.sh
+grep -q '"$steamcmd" +@sSteamCmdForcePlatformType windows' scripts/start.sh
+grep -q 'exit "$exit_code"' scripts/start.sh
+
+bash -n scripts/start.sh
 
 docker compose -f deploy/docker-compose.local.yml config --quiet
 docker compose -f deploy/nginx/docker-compose.local.yml config --quiet
