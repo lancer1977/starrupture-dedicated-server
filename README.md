@@ -105,6 +105,7 @@ Docker [https://hub.docker.com/r/struppinet/starrupture-dedicated-server](https:
 ## Documentation
 
 - [Docs Home](./docs/README.md)
+- [Validation](./docs/validation.md)
 - [Feature Index](./docs/features/README.md)
 - [Version Coverage Map](./docs/features/version-coverage-map.md)
 - [Core Capabilities](./docs/features/core-capabilities.md)

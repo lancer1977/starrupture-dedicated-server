@@ -5,7 +5,7 @@ owner: @DreadBreadcrumb
 priority: high
 complexity: 2
 created: 2026-06-30
-updated: 2026-06-30
+updated: 2026-07-03
 tags: [feature, starrupture, v-layer, runtime]
 established_versions: [V0]
 delegated_versions: [V1, V2, V3, V4, V5]
@@ -21,7 +21,7 @@ support-home versions are delegated to `../starrupture-support`.
 
 | Layer | Tag | Current coverage | Evidence | Next proof |
 | --- | --- | --- | --- | --- |
-| `V0` infra baseline | `established` | Runtime image source, startup script, mount paths, ports, deployment docs, and validation script exist | `Dockerfile`, `scripts/start.sh`, README, compose/deploy files, `scripts/validate.sh` | Add a faster container smoke once Steam/runtime dependencies can be isolated |
+| `V0` infra baseline | `established` | Runtime image source, startup script, mount paths, ports, deployment docs, syntax checks, and validation script exist | `Dockerfile`, `scripts/start.sh`, README, compose/deploy files, `scripts/validate.sh` | Add a faster container smoke once Steam/runtime dependencies can be isolated |
 | `V1` support-home boundary | `delegated` | Canonical support home lives outside this repo | `../starrupture-support` references | Keep this repo runtime-only |
 | `V2` read-only support proof | `delegated` | Support-sidecar/readback contracts belong in the support home | `../starrupture-support` | Runtime lane can later provide logs, ports, and server lifecycle proof |
 | `V3` control truth | `delegated` | Capability/action classification belongs in support/plugin contracts | `../starrupture-support`, `Api.GameServerInterop` | Do not add gameplay authority to this runtime repo |
@@ -32,7 +32,7 @@ support-home versions are delegated to `../starrupture-support`.
 
 `V0` is established for this runtime lane at the source/config level because the
 repo contains a Dockerfile, startup script, documented mounts, port settings,
-and deployment wrappers.
+entrypoint syntax validation, and deployment wrappers.
 
 This does not prove live deployment on `192.168.0.252`, and it does not widen
 the runtime repo into support-sidecar, plugin, policy, or operator ownership.
