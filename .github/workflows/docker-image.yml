@@ -6,6 +6,10 @@ on:
     paths-ignore:
       - 'README.md'
 
+concurrency:
+  group: starrupture-dedicated-server-docker-image-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
 
   build:
